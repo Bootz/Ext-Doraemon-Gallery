@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>豌豆荚的百宝袋</title>
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body>
+        <ul class="wrap"></ul>
+        <script src="scripts/vendor/require.js"></script>
+        <script type="text/javascript">
+            require(['scripts/app'], function () {});
+        </script>
+        <script type="text/x-ui-template" id="tmpl-category">
+            <div class="title-ctn hbox">
+                <div class="title">{{= it.name }}</div>
+                <div class="link button-toggle">查看全部</div>
+            </div>
+            <ul class="cf"></ul>
+        </script>
+        <script type="text/x-ui-template" id="tmpl-item">
+            <img class="icon" alt="{{= it.name }} /">
+            <div class="name wc">{{= it.name }}</div>
+            <div class="fav">{{= it.fav }}</div>
+            <button class="button-star">收藏</button>
+        </script>
+    </body>
+</html>

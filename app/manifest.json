@@ -1,0 +1,56 @@
+{
+    "name": "豌豆荚的百宝袋",
+    "version": "1.0.0.2",
+    "description": "豌豆荚的百宝袋",
+    "icons": {
+        "16": "icon16.png",
+        "72": "icon72.png"
+    },
+    "privacy_permissions": [
+        "window"
+    ],
+    "permissions" : [
+        "file:///*/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [""]
+        }
+    ],
+    "minimum_client_version" : "2.99",
+    "app": {
+        "launch": {
+            "web_url": "wdj-extension://__MSG_@@extension_id__/index.html"
+        },
+        "navigation": [
+            {
+                "label": "应用",
+                "web_url": "wdj-extension://__MSG_@@extension_id__/index.html?cate=1"
+            },
+            {
+                "label": "游戏",
+                "web_url": "wdj-extension://__MSG_@@extension_id__/index.html?cate=2"
+            },
+            {
+                "label": "音乐和铃声",
+                "web_url": "wdj-extension://__MSG_@@extension_id__/index.html?cate=3"
+            },
+            {
+                "label": "视频",
+                "web_url": "wdj-extension://__MSG_@@extension_id__/index.html?cate=4"
+            },
+            {
+                "label": "壁纸",
+                "web_url": "wdj-extension://__MSG_@@extension_id__/index.html?cate=5"
+            },
+            {
+                "label": "电子书",
+                "web_url": "wdj-extension://__MSG_@@extension_id__/index.html?cate=6"
+            },
+            {
+                "label": "有趣儿",
+                "web_url": "wdj-extension://__MSG_@@extension_id__/index.html?cate=7"
+            }
+        ]
+    }
+}
