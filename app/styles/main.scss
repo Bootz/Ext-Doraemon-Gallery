@@ -95,3 +95,116 @@ body {
         }
     }
 }
+
+.w-ui-loading {
+    background-color: rgba(255, 255, 255, .7);
+    border-radius: 5px;
+    display: none;
+    height: 50px;
+    left: 50%;
+    margin: -25px 0 0 -25px;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+
+    &.white {
+        background-color: transparent;
+
+        .anima {
+            .rotor {
+                background-color: #fff;
+                -webkit-animation-name: f_fadeG_black;
+            }
+        }
+    }
+
+    .anima {
+        height: 48px;
+        margin: -24px 0 0 -24px;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        width: 48px;
+        -webkit-transform: scale(.6);
+
+        .rotor {
+            background-color: #fff;
+            border-radius: 4px;
+            position: absolute;
+            width: 9px;
+            height: 9px;
+            -webkit-animation: {
+                direction: linear;
+                duration: .88s;
+                iteration-count: infinite;
+                name: f_fadeG;
+            }
+        }
+
+        .rotor1 {
+            left: 0;
+            top: 20px;
+            -webkit-animation-delay: .33s;
+        }
+
+        .rotor2 {
+            left: 6px;
+            top: 6px;
+            -webkit-animation-delay: .44s;
+        }
+
+        .rotor3 {
+            left: 20px;
+            top: 0;
+            -webkit-animation-delay: .55s;
+        }
+
+        .rotor4 {
+            right: 6px;
+            top: 6px;
+            -webkit-animation-delay: .66s;
+        }
+
+        .rotor5 {
+            right: 0;
+            top: 20px;
+            -webkit-animation-delay: .77s;
+        }
+
+        .rotor6 {
+            bottom: 6px;
+            right: 6px;
+            -webkit-animation-delay: .88s;
+        }
+
+        .rotor7 {
+            bottom: 0;
+            left: 20px;
+            -webkit-animation-delay: .99s;
+        }
+
+        .rotor8 {
+            bottom: 6px;
+            left: 6px;
+            -webkit-animation-delay: 1.1s;
+        }
+    }
+}
+
+@-webkit-keyframes f_fadeG {
+    0% {
+        background-color: #3c7800;
+    }
+    100% {
+        background-color: #fff;
+    }
+}
+
+@-webkit-keyframes f_fadeG_black {
+    0% {
+        background-color: #000;
+    }
+    100% {
+        background-color: #fff;
+    }
+}

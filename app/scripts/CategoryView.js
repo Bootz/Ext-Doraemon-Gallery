@@ -21,7 +21,7 @@
                     var data = JSON.parse(evt.data);
                     var item;
                     if (data.actions === 'gallery.star') {
-                        item = this.collection.get(data.id);
+                        item = this.options.models[0].collection.get(data.id);
                         if (item) {
                             item.set({
                                 hide : false
@@ -34,7 +34,7 @@
                             });
                         }
                     } else if (data.actions === 'gallery.unstar') {
-                        item = this.collection.get(data.id);
+                        item = this.options.models[0].collection.get(data.id);
                         if (item) {
                             item.set({
                                 hide : true

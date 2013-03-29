@@ -129,7 +129,8 @@
                 url : 'http://www.wandoujia.com/webstore/sidebar/install',
                 success : function (resp) {
                     try {
-                        var installed = JSON.parse(resp).install.split(',');
+                        $('.w-ui-loading').hide();
+                        var installed = resp.install.split(',');
                         collection.each(function (extension) {
                             if (installed.indexOf(extension.id) >= 0) {
                                 extension.set({
@@ -137,7 +138,9 @@
                                 });
                             }
                         });
-                    } catch (e) {}
+                    } catch (e) {
+
+                    }
                 }
             });
         });

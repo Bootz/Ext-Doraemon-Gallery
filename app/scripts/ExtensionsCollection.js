@@ -19,7 +19,7 @@
                     url : 'wdj://window/publish.json',
                     data : {
                         channel : 'sidebar.star',
-                        data : JSON.stringify({
+                        value : JSON.stringify({
                             id : this.id,
                             name : this.get('name'),
                             star : this.get('star')
